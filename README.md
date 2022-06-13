@@ -5,6 +5,7 @@
 
 | Problem       | Dificulty   | Space | Time |
 | :---          |    :----:   |   ---:|  ---:|
-|[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/).| 🟩 | | |
-|[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/).| 🟩 | | |
-|[49. Group Anagrams](https://leetcode.com/problems/group-anagrams/).| 🟦 | | |
+|[0217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/).| 🟩 | | |
+|[0242. Valid Anagram](https://leetcode.com/problems/valid-anagram/).| 🟩 | | |
+|[0049. Group Anagrams](https://leetcode.com/problems/group-anagrams/).| 🟦 | | |
+|[0347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/).| 🟦 | | |
