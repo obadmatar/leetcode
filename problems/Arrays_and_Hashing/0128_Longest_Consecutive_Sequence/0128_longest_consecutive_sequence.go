@@ -1,26 +1,38 @@
 package problems
 
 func longestConsecutive(nums []int) int {
-	max := 0
-	set := make(map[int]bool, len(nums))
+	numSet := make(map[int]bool, len(nums))
 
+	// inti num set
 	for _, n := range nums {
-		set[n] = true
+		numSet[n] = true
 	}
 
-	for _, n := range nums {
-		if set[n-1] {
-			continue
+	longest := 0
+	for n := range numSet {
+		delete(numSet, n)
+		
+		count := 1
+		
+		for left := n-1; numSet[left]; {
+			delete(numSet, left)
+			count++
+			left--
 		}
 
-		length := 0
-		for set[n + length] {
-			length++
-			if length > max {
-				max = length
-			}
+		for right := n+1; numSet[right]; {
+			delete(numSet, right)
+			count++
+			right++
 		}
+		longest = max(count, longest)
 	}
+	return longest;
+}
 
-	return max
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
