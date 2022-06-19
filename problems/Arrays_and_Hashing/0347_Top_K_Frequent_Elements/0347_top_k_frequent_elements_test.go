@@ -2,26 +2,26 @@ package problems
 
 import (
 	"fmt"
+	"golang.org/x/exp/slices"
 	"sort"
 	"testing"
-	"golang.org/x/exp/slices"
 )
 
 type question struct {
-	nums []int
-	k int
+	nums   []int
+	k      int
 	output []int
 }
 
 var questions = []question{
 	{
-		nums: []int{1,1,1,2,2,3},
-		k: 2,
-		output: []int{1,2},
+		nums:   []int{1, 1, 1, 2, 2, 3},
+		k:      2,
+		output: []int{1, 2},
 	},
 	{
-		nums: []int{1},
-		k: 1,
+		nums:   []int{1},
+		k:      1,
 		output: []int{1},
 	},
 }

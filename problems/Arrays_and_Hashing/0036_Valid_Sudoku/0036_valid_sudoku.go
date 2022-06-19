@@ -16,6 +16,7 @@ func isValidSudoku(board [][]byte) bool {
 
 			if board[r][c] == '.' {
 				continue
+
 			}
 
 			val := board[r][c]

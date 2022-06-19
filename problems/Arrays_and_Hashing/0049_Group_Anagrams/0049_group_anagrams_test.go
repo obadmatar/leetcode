@@ -2,8 +2,8 @@ package problems
 
 import (
 	"fmt"
-	"testing"
 	"golang.org/x/exp/slices"
+	"testing"
 )
 
 type question struct {
@@ -13,20 +13,20 @@ type question struct {
 
 var questions = []question{
 	{
-		[]string{"eat","tea","tan","ate","nat","bat"},
-		[][]string{{"eat","tea","ate"}, {"tan","nat"}, {"bat"}},
+		[]string{"eat", "tea", "tan", "ate", "nat", "bat"},
+		[][]string{{"eat", "tea", "ate"}, {"tan", "nat"}, {"bat"}},
 	},
 	{
 		[]string{""},
-		[][]string {{""}},
+		[][]string{{""}},
 	},
 	{
-		[]string{"bdddddddddd","bbbbbbbbbbc"},
+		[]string{"bdddddddddd", "bbbbbbbbbbc"},
 		[][]string{{"bdddddddddd"}, {"bbbbbbbbbbc"}},
 	},
 	{
-		[]string{"a"},	
-		[][]string {{"a"}},
+		[]string{"a"},
+		[][]string{{"a"}},
 	},
 }
 
@@ -48,7 +48,7 @@ func equal(expected, actual [][]string) bool {
 	}
 	for i, _ := range expected {
 
-		if 	!slices.Equal(expected[i], actual[i]) {
+		if !slices.Equal(expected[i], actual[i]) {
 			return false
 		}
 	}

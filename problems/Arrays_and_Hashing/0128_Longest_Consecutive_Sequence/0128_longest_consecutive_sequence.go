@@ -11,23 +11,23 @@ func longestConsecutive(nums []int) int {
 	longest := 0
 	for n := range numSet {
 		delete(numSet, n)
-		
+
 		count := 1
-		
-		for left := n-1; numSet[left]; {
+
+		for left := n - 1; numSet[left]; {
 			delete(numSet, left)
 			count++
 			left--
 		}
 
-		for right := n+1; numSet[right]; {
+		for right := n + 1; numSet[right]; {
 			delete(numSet, right)
 			count++
 			right++
 		}
 		longest = max(count, longest)
 	}
-	return longest;
+	return longest
 }
 
 func max(a, b int) int {
